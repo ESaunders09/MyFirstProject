@@ -1,4 +1,4 @@
-import random
+import random, pyperclip
 
 # Define characters that can be in the password
 letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -42,3 +42,5 @@ for _ in range(numPasswords):
     for _ in range(length):
         password += random.choice(all_chars)
     print("Your password is:", password)
+    pyperclip.copy(password)
+    print("Password copied to clipboard!")
