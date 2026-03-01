@@ -1,10 +1,10 @@
 import random, pyperclip
 
 # Define characters that can be in the password
-letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-numbers = "0123456789"
-symbols = "!@#$%^&()_+-="
-all_chars = letters + numbers + symbols # Combine everything
+LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+NUMBERS = "0123456789"
+SYMBOLS = "!@#$%^&()_+-="
+ALL_CHARS = LETTERS + NUMBERS + SYMBOLS # Combine everything
 
 
 # Use validation to check for invalid inputs
@@ -40,7 +40,7 @@ for p_num in range(num_passwords):
 
     # Generate the random password
     for _ in range(length):
-        password += random.choice(all_chars)
+        password += random.choice(ALL_CHARS)
     print("Your password #" + str((p_num+1)), "is:", password)
     copy_check = input("Would you like to copy this password to clipboard? (y/n) ")
     if copy_check.upper() == "Y":
